@@ -36,9 +36,6 @@ $ java -jar matcher.jar -h
   -h, --help               Print this help menu
 ```
 
-To calculate the term frequency-inverse document frequency for a corpus (or directory) use the `-d`
-or `--directory` flag with the absolute path to the directory as in the example below.
-
 To determine the genre for each book in a list of books, provide the list of books as a JSON file --- sample
 are shown below --- and a CSV file with the keywords and their respective genre and score.
 
@@ -57,6 +54,50 @@ genre-matcher
   │   genre-keywords.csv
   │   books.json
   ...
+```
+
+```
+$ cat data/books.json
+
+[{
+  "title": "Hunger Games",
+  "description": "In a not-too-distant future, the United States of America has collapsed, weakened by
+  drought, fire, famine, and war, to be replaced by Panem, a country divided into the Capitol and 12
+  districts. Each year, two young representatives from each district are selected by lottery to participate
+  in The Hunger Games. Part entertainment, part brutal intimidation of the subjugated districts, the
+  televised games are broadcasted throughout Panem as the 24 participants are forced to eliminate their
+  competitors, literally, with all citizens required to watch. When 16-year-old Katniss's young sister,
+  Prim, is selected as the mining district's female representative, Katniss volunteers to take her place.
+  She and her male counterpart, Peeta, the son of the town baker who seems to have all the fighting
+  skills of a lump of bread dough, will be pitted against bigger, stronger representatives who have
+  trained for this their whole lives. Collins's characters are completely realistic and sympathetic
+  as they fight and form alliances and friendships in the face of overwhelming odds; the plot is
+  tense, dramatic, and engrossing. This book will definitely resonate with the generation raised on
+  reality shows like 'Survivor' and 'American Gladiator.' Book one of a planned trilogy."
+},
+...
+]
+```
+
+```
+$ cat data/genre-keywords.csv
+
+Genre,Keyword,Points
+action,fast paced,7
+action,distant future,4
+action,fight,6
+mystery,murder,5
+mystery,death,8
+mystery,explosive,4
+biography,great man,7
+biography,great woman,7
+sci-fi,distant future,8
+sci-fi,dystopian,7
+sci-fi,space,6
+literary fiction,subplot,5
+literary fiction,cerebral,7
+literary fiction,literary,9
+
 ```
 
 This is necessary to demonstrate what the output will look like for the sample input.
