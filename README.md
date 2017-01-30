@@ -1,6 +1,6 @@
 # genre-matcher
 
-An uncomplete trivial genre matcher for matching genres to books.
+An incomplete trivial genre matcher for matching genres to books.
 
 ## (ATTENTION: This tool is not complete)
 
